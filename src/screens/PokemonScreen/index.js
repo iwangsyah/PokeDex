@@ -1,5 +1,5 @@
 //Pokemons.js
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -13,7 +13,7 @@ import { Header } from '../../components';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigation } from '../../configs';
 
-const Pokemons = ({navigation}) => {
+const Pokemons = ({ navigation }) => {
   const pokemons = useSelector(state => state.pokemonReducer.data);
   const [searchfeild, setSearchfeild] = useState('');
   const dispatch = useDispatch();
@@ -24,10 +24,10 @@ const Pokemons = ({navigation}) => {
 
   return (
     <>
-      <Header 
-        title="Pokemons" 
+      <Header
+        title="Pokemons"
         withSearch={true}
-        searchfeild={searchfeild} 
+        searchfeild={searchfeild}
         setSearchfeild={setSearchfeild}
       />
       <ScrollView>
@@ -46,8 +46,8 @@ const Pokemons = ({navigation}) => {
                     pokemonName: pokemon.name
                   })}>
                   <Image style={styles.image} source={{
-                      uri: `https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${pokemon.name}.png`,
-                  }}/>
+                    uri: `https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/${pokemon.name}.png`,
+                  }} />
                   <Text style={styles.name}>{_.capitalize(pokemon.name)}</Text>
                 </TouchableOpacity>
               );
@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     borderBottomColor: 'black',
-    marginHorizontal: 20,
+    marginHorizontal: 10,
     marginVertical: 10,
     backgroundColor: 'rgba(255,203,5,0.3)',
-    paddingVertical:10,
+    paddingVertical: 10,
     borderRadius: 10
   },
   shadow: {
@@ -89,12 +89,12 @@ const styles = StyleSheet.create({
     elevation: 18,
   },
   image: {
-    width: 150, 
-    height: 150, 
+    width: 150,
+    height: 150,
     resizeMode: 'contain'
   },
   name: {
-    fontSize: 16, 
+    fontSize: 16,
     fontWeight: 'bold'
   }
 });
