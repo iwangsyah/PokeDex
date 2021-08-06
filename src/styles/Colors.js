@@ -1,0 +1,14 @@
+export const PRIMARY = '#216266';
+export const PRIMARY2 = '#5F9DD2';
+export const INACTIVE = '#EDEDED';
+export const BG_PRIMARY = '#FFFFFF';
+export const BG_SECONDARY = '#E5E5E5';
+export const BG_TERITARY = '#999999';
+export const TEXT_PRIMARY = '#000000';
+export const TEXT_SECONDARY = '#FFFFFF';
+export const TEXT_TERITARY = '#999999';
+export const GREY = '#707070';
+export const LINE = '#E5E5E5';
+export const BLUE = '#3685ed';
+export const RED = '#ff0000';
+export const PRIMARY_HEADER= '#329399';
